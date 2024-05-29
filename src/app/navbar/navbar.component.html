@@ -1,0 +1,6 @@
+<div class="navbar">
+    <a href="">Home</a>
+    <a href="/profile">Profile</a>
+    <a href="/login" *ngIf="authService.isAuthorised() === false">Log In</a>
+    <a  (click)="logOut()" *ngIf="authService.isAuthorised() === true">Log Out</a>
+</div>
